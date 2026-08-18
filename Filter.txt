@@ -1,0 +1,16 @@
+! Title: HERI - YouTube Anti-Adblock Breaker
+! Description: Removes anti-adblock warnings and restores usability without breaking legitimate popups.
+! Updated: 18 Aug 2026
+
+! 1. Surgically removes the parent dialog ONLY if it contains the enforcement modal
+youtube.com##tp-yt-paper-dialog:has(> ytd-enforcement-message-view-model)
+youtube.com##ytd-enforcement-message-view-model
+
+! 2. Removes the dark/gray backdrop overlay that blocks interaction
+youtube.com##tp-yt-iron-overlay-backdrop
+
+! 3. Restores scrolling and unfreezes page layout
+youtube.com##html, body:style(overflow: auto !important; position: static !important;)
+
+! 4. Neutralizes the JS trigger that renders this component and pauses the player
+youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.enforcementMessageViewModel, undefined)
