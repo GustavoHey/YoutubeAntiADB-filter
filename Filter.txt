@@ -1,6 +1,9 @@
 ! Title: HERI - YouTube Anti-Adblock Breaker
-! Description: Removes anti-adblock warnings and restores usability without breaking legitimate popups.
-! Updated: 18 Aug 2026
+! Description: Removes Youtube anti-adblock warnings and restores usability without breaking legitimate popups.
+! Version: 1.0.2
+! Last modified: 18 Aug 2026
+! Homepage: https://github.com/GustavoHey/YoutubeAntiADB-filter
+! Expires: 1 day
 
 ! 1. Surgically removes the parent dialog ONLY if it contains the enforcement modal
 youtube.com##tp-yt-paper-dialog:has(> ytd-enforcement-message-view-model)
