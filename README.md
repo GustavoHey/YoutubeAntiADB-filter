@@ -1,6 +1,13 @@
 <div align="center">
 
-# 🛡️ YouTube Anti-ADB Popup REMOVE
+# 🛡️ YouTube Anti-ADB Popup REMOVER
+
+  <img src="https://raw.githubusercontent.com/GustavoHey/YoutubeAntiADB-filter/refs/heads/main/YoutubePopUp.jpg" alt="YouTube Anti-Adblock Popup Preview" width="600" />
+  <br>
+  
+!! TEMPORARY FIX: ONLY USE IF YOUR AD BLOCKER HASN'T FIXED THIS YET OR THE WARNING HAS STARTED APPEARING !!
+
+(Updated: August 18, 2026)
 
 A lightweight custom filter designed to suppress YouTube's anti-adblock warning popup and preserve uninterrupted video playback.
 
