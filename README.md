@@ -20,6 +20,12 @@ This filter combines targeted cosmetic CSS rules to hide modal overlays with pro
 * **Zero Bloat:** Minimalist rules focused exclusively on anti-adblock scripts.
 * **Universal Compatibility:** Should works on every Chromium and Firefox-based adblock engines.
 
+<details>
+  <summary>🔍 <b>View Youtube popup Warning (Screenshot)</b></summary>
+  <br>
+  <img src="https://raw.githubusercontent.com/GustavoHey/YoutubeAntiADB-filter/refs/heads/main/YoutubePopUp.jpg" alt="YouTube Anti-Adblock Popup Preview" width="600" />
+</details>
+
 ---
 
 ## 🔗 Filter URL
@@ -28,3 +34,19 @@ Copy and paste the raw link below into your adblocker's custom/subscribed filter
 
 ```text
 https://raw.githubusercontent.com/GustavoHey/YoutubeAntiADB-filter/refs/heads/main/Filter.txt
+```
+
+## 🚀 Quick Setup
+
+### Brave Browser:
+1. Go to brave://settings/shields/filters.
+2. Under Custom Filters, paste the URL into the input field and click Add.
+
+### uBlock Origin:
+1. Open the Dashboard (⚙️ Options) → Go to Filter lists.
+2. Scroll down to the Custom section and check Import.
+3. Paste the URL above and click Apply changes.
+
+### AdGuard:
+1. Open Settings → Filters → Custom.
+2. Click Add custom filter, enter the URL, and save.
