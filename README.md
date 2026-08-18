@@ -27,4 +27,4 @@ This filter combines targeted cosmetic CSS rules to hide modal overlays with pro
 Copy and paste the raw link below into your adblocker's custom/subscribed filter lists:
 
 ```text
-[https://raw.githubusercontent.com/GustavoHey/YoutubeAntiADB-filter/refs/heads/main/Filter.txt](https://raw.githubusercontent.com/GustavoHey/YoutubeAntiADB-filter/refs/heads/main/Filter.txt)
+https://raw.githubusercontent.com/GustavoHey/YoutubeAntiADB-filter/refs/heads/main/Filter.txt
