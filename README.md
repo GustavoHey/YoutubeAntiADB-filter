@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🛡️ YouTube Anti-ADB Popup Bypass
+# 🛡️ YouTube Anti-ADB Popup REMOVE
 
 A lightweight custom filter designed to suppress YouTube's anti-adblock warning popup and preserve uninterrupted video playback.
 
