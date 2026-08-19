@@ -1,19 +1,33 @@
 ! Title: HERI - YouTube Anti-Adblock Breaker
 ! Description: Removes Youtube anti-adblock warnings and restores usability without breaking legitimate popups.
-! Version: 1.0.2
-! Last modified: 18 Aug 2026
+! Version: 1.2.0
+! Last modified: 19 Aug 2026
 ! Homepage: https://github.com/GustavoHey/YoutubeAntiADB-filter
 ! Expires: 1 day
 
-! 1. Surgically removes the parent dialog ONLY if it contains the enforcement modal
-youtube.com##tp-yt-paper-dialog:has(> ytd-enforcement-message-view-model)
+! ==============================================================================
+! 1. SCRIPTLETS: Neutralization of JS Payloads and Triggers (Network and Memory Levels)
+! ==============================================================================
+! Removes the modal key from both the initial response and dynamic XHR/Fetch requests.
+youtube.com##+js(json-prune, auxiliaryUi.messageRenderers.enforcementMessageViewModel)
+youtube.com##+js(json-prune, playerResponse.auxiliaryUi.messageRenderers.enforcementMessageViewModel)
+youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.enforcementMessageViewModel, undefined)
+
+! ==============================================================================
+! 2. STYLES: Surgical Removal of Dialogue and Backdrop
+! ==============================================================================
+! Removes the dialog container only if it contains the enforcement element.
+youtube.com##tp-yt-paper-dialog:has(ytd-enforcement-message-view-model)
 youtube.com##ytd-enforcement-message-view-model
 
-! 2. Removes the dark/gray backdrop overlay that blocks interaction
-youtube.com##tp-yt-iron-overlay-backdrop
+! Hides the dark backdrop that blocks clicks on the page.
+youtube.com##tp-yt-iron-overlay-backdrop:style(display: none !important; opacity: 0 !important; pointer-events: none !important;)
 
-! 3. Restores scrolling and unfreezes page layout
-youtube.com##html, body:style(overflow: auto !important; position: static !important;)
+! Disables click capture if the parent container still attempts to retain events.
+youtube.com##ytd-popup-container:has(ytd-enforcement-message-view-model):style(pointer-events: none !important;)
 
-! 4. Neutralizes the JS trigger that renders this component and pauses the player
-youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.enforcementMessageViewModel, undefined)
+! ==============================================================================
+! 3. LAYOUT UNFREEZING: Restoration of Scroll and User Events
+! ==============================================================================
+! Forces the unlocking of scrolling and clicks on the HTML, Body, and Main Container (ytd-app)
+youtube.com##html, body, ytd-app:style(overflow: auto !important; position: static !important; pointer-events: auto !important; touch-action: auto !important;)
