@@ -7,7 +7,7 @@
   
 !! TEMPORARY FIX: ONLY USE IF YOUR AD BLOCKER HASN'T FIXED THIS YET OR THE WARNING HAS STARTED APPEARING !!
 
-(Updated: August 18, 2026)
+(Updated: August 19, 2026)
 
 A lightweight custom filter designed to suppress YouTube's anti-adblock warning popup and preserve uninterrupted video playback.
 
